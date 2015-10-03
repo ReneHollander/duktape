@@ -1414,7 +1414,7 @@ DUK_LOCAL void duk__debug_handle_eval(duk_hthread *thr, duk_heap *heap) {
 		}
 	}
 
-	call_ret = duk_handle_call(thr, 2 /*num_stack_args*/, call_flags);
+	call_ret = duk_handle_call_protected(thr, 2 /*num_stack_args*/, call_flags);
 
 	if (call_ret == DUK_EXEC_SUCCESS) {
 		eval_err = 0;
