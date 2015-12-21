@@ -1183,6 +1183,11 @@ Planned
 1.4.0 (XXXX-XX-XX)
 ------------------
 
+* Add support for using C++ exceptions instead of setjmp()/longjmp() to
+  propagate errors inside Duktape; this change allows C++ code to use scope
+  based resource management (automatic destructor calls) in Duktape/C
+  functions with the cleanup code executing on errors (GH-499)
+
 * Add minimal support for "const" declarations with non-standard semantics,
   intended mainly for minimal compatibility with existing code using "const"
   (GH-360)
