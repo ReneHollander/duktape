@@ -9,7 +9,11 @@
  *  Forward declarations
  */
 
+#if defined(DUK_USE_CPP_EXCEPTIONS)
+class duk_internal_exception;
+#else
 struct duk_jmpbuf;
+#endif
 
 /* duk_tval intentionally skipped */
 struct duk_heaphdr;
